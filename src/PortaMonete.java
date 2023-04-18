@@ -1,8 +1,12 @@
+import java.util.Scanner;
+
 public class PortaMonete {
 
     static int monetacinquanta;
     static int moneta1;
     static int moneta2;
+
+    static double valore;
     public PortaMonete(){
         this.monetacinquanta = 0;
         this.moneta1 = 0;
@@ -27,6 +31,18 @@ public class PortaMonete {
         return moneta2;
     }
 
+    public static void setMonetacinquanta(int monetacinquanta) {
+        PortaMonete.monetacinquanta = monetacinquanta;
+    }
+
+    public static void setMoneta1(int moneta1) {
+        PortaMonete.moneta1 = moneta1;
+    }
+
+    public static void setMoneta2(int moneta2) {
+        PortaMonete.moneta2 = moneta2;
+    }
+
     public static double disponibilita(){
         double soldi = getMoneta1()*1 + getMoneta2()*2 + getMonetacinquanta()*0.50;
         if(soldi == 0){
@@ -36,7 +52,7 @@ public class PortaMonete {
             return soldi;
         }
 
-        return 0;
+        return soldi;
     }
 
     public static void conversioneEuro(){
@@ -195,6 +211,28 @@ public class PortaMonete {
                 System.out.print("nove");
                 break;
         }
+
+    }
+
+    public static void inserisci(){
+        Scanner tastiera = new Scanner(System.in);
+        System.out.print("Inserisci un altra moneta: ");
+        valore = tastiera.nextInt();
+
+        if(valore == 0.50){
+            setMonetacinquanta(monetacinquanta + 1);
+        } else if (valore == 1) {
+            setMoneta1(moneta1 + 1);
+        }
+        else{
+            setMoneta2(moneta2 + 1);
+        }
+
+        System.out.println("Ora la tua disponibilita est: " + disponibilita());
+        System.out.print("Conversione in lettere: ");
+        conversioneEuro();
+
+
 
     }
 
