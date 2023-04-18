@@ -231,8 +231,30 @@ public class PortaMonete {
         System.out.println("Ora la tua disponibilita est: " + disponibilita());
         System.out.print("Conversione in lettere: ");
         conversioneEuro();
+    }
 
+    public static void inserisciDiPiu(){
+        Scanner tastiera = new Scanner(System.in);
+        System.out.print("Quante altre monete vuoi inserire: ");
+        int nMonete = tastiera.nextInt();
 
+        for(int i=0; i<nMonete;i++){
+            System.out.print("Inserisci un altra moneta: ");
+            valore = tastiera.nextInt();
+
+            if(valore == 0.50){
+                setMonetacinquanta(monetacinquanta + 1);
+            } else if (valore == 1) {
+                setMoneta1(moneta1 + 1);
+            }
+            else{
+                setMoneta2(moneta2 + 1);
+            }
+
+        }
+        System.out.println("Ora la tua disponibilita est: " + disponibilita());
+        System.out.print("Conversione in lettere: ");
+        conversioneEuro();
 
     }
 

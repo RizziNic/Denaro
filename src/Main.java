@@ -5,12 +5,13 @@ public class Main {
 
         System.out.print("Disponibilità: ");
         System.out.println(PortaMonete.disponibilita() + " euro");
+
         System.out.print("Conversione in lettere: ");
         PortaMonete.conversioneEuro();
         System.out.println("\n");
 
         PortaMonete.inserisci();
-
+        PortaMonete.inserisciDiPiu();
 
 
     }
