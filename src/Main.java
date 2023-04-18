@@ -4,15 +4,17 @@ public class Main {
         //PortaMonete prova2 = new PortaMonete();
 
         System.out.print("Disponibilità: ");
-        System.out.println(PortaMonete.disponibilita() + " euro");
+        System.out.println(prova.disponibilita() + " euro");
 
         System.out.print("Conversione in lettere: ");
-        PortaMonete.conversioneEuro();
+        prova.conversioneEuro();
         System.out.println("\n");
 
-        PortaMonete.inserisci();
+        prova.inserisci();
         System.out.println();
-        PortaMonete.inserisciDiPiu();
+        prova.inserisciDiPiu();
+
+        prova.denaroPerTipo();
 
 
     }
