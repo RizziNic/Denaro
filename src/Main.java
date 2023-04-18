@@ -11,6 +11,7 @@ public class Main {
         System.out.println("\n");
 
         PortaMonete.inserisci();
+        System.out.println();
         PortaMonete.inserisciDiPiu();
 
 
