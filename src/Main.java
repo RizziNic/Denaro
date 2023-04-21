@@ -1,3 +1,5 @@
+import javax.sound.sampled.Port;
+
 public class Main {
     public static void main(String[] args) {
         PortaMonete prova = new PortaMonete(2, 3, 4);
@@ -30,11 +32,12 @@ public class Main {
 
         prova2.denaroPerTipo();
 
+        double dispomonete = prova.disponibilita();
+        double dispobanconote = prova2.disponibilita();
+        double somma = dispomonete + dispobanconote;
 
         System.out.print("Conto totale: ");
-        System.out.println(prova2.contoTotale());
-
-
+        System.out.println(somma);
 
 
     }

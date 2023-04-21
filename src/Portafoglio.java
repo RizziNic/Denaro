@@ -214,7 +214,6 @@ public class Portafoglio extends PortaMonete{
 
     }
 
-
     @Override
     public void inserisci(){
         Scanner tastiera = new Scanner(System.in);
@@ -276,22 +275,6 @@ public class Portafoglio extends PortaMonete{
         System.out.print("Banconote da 20 euro: ");
         System.out.println(getB20());
     }
-
-    public double getMonete(){
-        return super.disponibilita();
-    }
-
-    public double setdisponibilita(){
-        this.soldoni = this.disponibilita() + super.getDisponibilita();
-        return soldoni;
-    }
-
-
-    public double contoTotale(){
-        setdisponibilita();
-        return soldoni;
-    }
-
 
 
 }

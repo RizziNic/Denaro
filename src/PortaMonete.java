@@ -1,7 +1,7 @@
 import javax.sound.sampled.Port;
 import java.util.Scanner;
 
-public class PortaMonete {
+public class PortaMonete{
 
     int monetacinquanta;
     int moneta1;
@@ -272,16 +272,6 @@ public class PortaMonete {
         System.out.print("Monete da 2 euro: ");
         System.out.println(getMoneta2());
     }
-
-    public double getDisponibilita(){
-        return this.disponibilita();
-
-    }
-
-
-
-
-
 
 }
 
