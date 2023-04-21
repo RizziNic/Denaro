@@ -1,3 +1,4 @@
+import javax.sound.sampled.Port;
 import java.util.Scanner;
 
 public class PortaMonete {
@@ -18,7 +19,7 @@ public class PortaMonete {
         this.moneta2 = moneta2;
     }
 
-    public double getMonetacinquanta() {
+    public int getMonetacinquanta() {
         return monetacinquanta;
     }
 
@@ -45,12 +46,11 @@ public class PortaMonete {
     public double disponibilita(){
         double soldi = getMoneta1()*1 + getMoneta2()*2 + getMonetacinquanta()*0.50;
         if(soldi == 0){
-            System.out.print("SEI AL VERDE ");
+            //System.out.print("SEI AL VERDE ");
         }
         else{
             return soldi;
         }
-
         return soldi;
     }
 
@@ -245,6 +245,7 @@ public class PortaMonete {
             System.out.print("Inserisci un altra moneta: ");
             valore = tastiera.nextDouble();
 
+
             if(valore == 0.50){
                 setMonetacinquanta(monetacinquanta + 1);
             } else if (valore == 1) {
@@ -271,6 +272,16 @@ public class PortaMonete {
         System.out.print("Monete da 2 euro: ");
         System.out.println(getMoneta2());
     }
+
+    public double getDisponibilita(){
+        return this.disponibilita();
+
+    }
+
+
+
+
+
 
 }
 
